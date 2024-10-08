@@ -18,9 +18,7 @@ class Cell {
 
 init(number);
 randomizeBombs(number);
-// setBombs();
 setValue();
-// setValuesOfCells();
 
 function randomizeBombs(number) {
     while(bombs.length < bomsCout) {
@@ -76,25 +74,6 @@ function setValue() {
         }
     
         cell.value = counter;
-    }
-};
-
-function setBombs() {
-    let cells = document.querySelectorAll('.cell');
-    for (let i = 0; i < cells.length; i++ ) {
-        if (bombs.includes(i)) {
-            // cells[i].innerHTML = '*'
-        }
-    }
-};
-
-function setValuesOfCells() {
-    let cellsCollection = document.querySelectorAll('.cell');
-    for (let i = 0; i < cellsCollection.length; i++ ) {
-        let value = cells[i].value;
-        if (value) {
-            cellsCollection[i].innerHTML = value;
-        }
     }
 };
 
